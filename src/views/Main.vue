@@ -66,10 +66,28 @@
         </van-col>
       </van-row>
       <div class="scorllcard">
-        <div>
-
+        <div class="item">
+          <p>孕期护肤提醒</p>
+          <p>怀孕可不可以用护肤品...</p>
+          <img src="../../resources/bag.png" alt="">
+        </div>
+        <div class="item">
+          <p>孕期职场提醒</p>
+          <p>职场孕妈因为工作...</p>
+          <img src="../../resources/bag.png" alt="">
+        </div>
+        <div class="item">
+          <p>穿衣要注意</p>
+          <p>随着孕期的增加...</p>
+          <img src="../../resources/bag.png" alt="">
+        </div>
+        <div class="item">
+          <p>孕妇正确睡姿</p>
+          <p>怀孕后，大部分孕妇</p>
+          <img src="../../resources/bag.png" alt="">
         </div>
       </div>
+      <div style="height:100px"></div>
     </div>
   </div>
 </template>
@@ -146,14 +164,59 @@ export default {
       font-weight: bold;
     }
     .scorllcard {
+      width: 100%;
+      overflow-x: auto;
+      overflow-y: hidden;
+      white-space: nowrap;
+      height: 75px;
       div {
-        margin: 14px 0;
+        display: inline-table;
+        vertical-align: top;
+        padding: 5px;
+        margin: 8px;
         width: 165px;
         height: 75px;
       }
       div:nth-child(1) {
-        background: #FFA4B7;
-        opacity:0.3;
+        background: #ffa4b7;
+      }
+      div:nth-child(2) {
+        background: #a3dcfd;
+      }
+      div:nth-child(3) {
+        background: #ecefff;
+      }
+      div:nth-child(4) {
+        background: #a3dcfd;
+      }
+      .item {
+        color: black;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        position: relative;
+        p {
+          font-size: 13px;
+          width: 120px;
+          margin: 0;
+          padding: 0;
+        }
+        p:nth-child(1) {
+          color: black;
+          font-size: 15px;
+        }
+        p:nth-child(2) {
+          margin-top: 5px;
+          color: #696969;
+          font-size: 13px;
+        }
+        img {
+          width: 40px;
+          height: 40px;
+          position: absolute;
+          right: 0;
+          top: 18px;
+        }
       }
     }
   }
